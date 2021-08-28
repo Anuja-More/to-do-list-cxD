@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon" />
+    <script
+      src="https://kit.fontawesome.com/6cf87d1226.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <link rel="stylesheet" href="style.css" />
+
+    <title>To Do List</title>
+  </head>
+  <body class="light">
+    <header>
+      <h1>Get things done!</h1>
+      <img src="./images/moon.svg" alt="" class="theme">
+    </header>
+
+    <main>
+      <form class="form__todo" action="" method="GET">
+        <h2>New Task</h2>
+        <div class="todo__title">
+          <label for="todo__title">Title</label>
+          <input placeholder="Task title" type="text" name="title" id="todo__title" / required>
+        </div>
+        
+        <div class="todo__description">
+          <label for="todo__description">Description</label>
+          <textarea  placeholder="What do you need to be done?" name="description" id="todo__description"cols="30" rows="5"></textarea>
+        </div>
+
+        <div class="todo__assignee">
+            <p>Assign task to</p>
+            <label class="label__assignee">
+              <input
+                type="radio"
+                name="assignee"
+                value="avatar1"
+                class="input__todo--hide"
+              />
+              <img src="./images/avatar1.png" class="img__assignee" alt="" />
+            </label>
+            <label class="label__assignee">
+              <input
+                type="radio"
+                name="assignee"
+                value="avatar2"
+                class="input__todo--hide"
+              />
+              <img src="./images/avatar2.png" class="img__assignee" alt="" />
+            </label>
+            <label class="label__assignee">
+              <input
+                type="radio"
+                name="assignee"
+                value="avatar3"
+                class="input__todo--hide"
+              />
+              <img src="./images/avatar3.png" class="img__assignee" alt="" />
+            </label>
+            <label class="label__assignee">
+              <input
+                type="radio"
+                name="assignee"
+                value="avatar4"
+                class="input__todo--hide"
+              />
+              <img src="./images/avatar4.png" class="img__assignee" alt="" />
+            </label>
+            <label class="label__assignee">
+              <input
+                type="radio"
+                name="assignee"
+                value="avatar5"
+                class="input__todo--hide"
+              />
+              <img src="./images/avatar5.png" class="img__assignee" alt="" />
+            </label>
+          </div>
+
+        <div class="todo__tags">
+          <p>Assign tag(s)</p>
+          <label class="label__tag">
+            <input
+              type="checkbox"
+              name="tag"
+              value="holiday"
+              class="input__todo--hide"
+            />
+            <span class="tag tag--holiday">holiday</span>
+          </label>
+          <label class="label__tag">
+            <input
+              type="checkbox"
+              name="tag"
+              value="work"
+              class="input__todo--hide"
+            />
+            <span class="tag tag--work">work</span>
+          </label>
+          <label class="label__tag">
+            <input
+              type="checkbox"
+              name="tag"
+              value="garden"
+              class="input__todo--hide"
+            />
+            <span class="tag tag--garden">gardening</span>
+          <label class="label__tag">
+            <input
+              type="checkbox"
+              name="tag"
+              value="home"
+              class="input__todo--hide"
+            />
+            <span class="tag tag--home">home</span>
+          </label>
+        </div>
+
+        <div class="todo__deadline">
+          <label for="todo__deadline">Deadline</label>
+          <input type="date" name="deadline" id="todo__deadline" required />
+        </div>
+        <input type="submit" class="btn btn__add" value="Add new task"/>
+
+        <div class="delete hide">    
+            <p>Drop task here to delete it</p>
+        </div>
+      </form>
+
+      <div class="list todo">
+          <div class="list__header">
+              <h2>To Do</h2>
+              <p class="nbToDo"></p>
+          </div>
+
+      </div>
+      <div class="list ongoing">
+        <div class="list__header">
+            <h2>In Progress</h2>
+            <p class="nbToDo"></p>
+
+        </div>
+
+      </div>
+      <div class="list done">
+        <div class="list__header">
+            <h2>Done</h2>
+            <p class="nbToDo"></p>
+
+        </div>
+      </div>
+    </main>
+
+    <script src="app.js"></script>
+    <script src="theme.js"></script>
+  </body>
+</html>
